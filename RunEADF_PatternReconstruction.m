@@ -4,7 +4,7 @@
 %   journal={Haardt, Ed. Verlag ISLE},
 %   year={2007}
 % }
-clear all
+clear
 close all
 
 load HelixStruct.mat
@@ -41,8 +41,12 @@ L = 15;                                                     % assuming significa
 figure
 surf(abs(Gtot),'linestyle','none')
 
-angle1 = sqrt(2):sqrt(2):sqrt(5)*157;        ang1 = angle1*(pi/180);
-angle2 = theta;                         ang2 = angle2*(pi/180);
+angle1 = sqrt(2):sqrt(2):sqrt(5)*157;        
+ang1 = angle1*(pi/180);
+
+angle2 = theta;                         
+ang2 = angle2*(pi/180);
+
 db1 = exp(1j * ang1.* mu1);                                 % in 4.35
 db2 = exp(1j * ang2.* mu2);                                 % in 4.35
 
